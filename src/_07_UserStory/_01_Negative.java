@@ -43,13 +43,13 @@ public class _01_Negative extends BaseDriver {
         MyFunc.Bekle(1);
 
         WebElement passwordAgain = driver.findElement(By.cssSelector("[onfocusout='ControlPassword();']"));
-        passwordAgain.sendKeys("Passw3fasfsa");
+        passwordAgain.sendKeys("Passw3");
         MyFunc.Bekle(2);
 
         WebElement delete_MyAccount = driver.findElement(By.cssSelector("[style='text-align:center;margin-left:0px !important']"));
         delete_MyAccount.click();
 
-        Assert.assertTrue("yanlış şifre ", passwordAgain.equals("Password123"));
+        Assert.assertTrue("Yanlış şifre ", passwordAgain.equals("Password123"));
 
         BekleKapat();
     }
